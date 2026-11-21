@@ -19,11 +19,15 @@ function ProductList({ products, selectedCategory, onCategoryChange, onAddToCart
           </option>
         ))}
       </select>
-      <ul className="Products">
-        {visibleProducts.map((product) => (
-          <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
-        ))}
-      </ul>
+      {visibleProducts.length === 0 ? (
+        <p>No products available.</p>
+      ) : (
+        <ul className="Products">
+          {visibleProducts.map((product) => (
+            <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

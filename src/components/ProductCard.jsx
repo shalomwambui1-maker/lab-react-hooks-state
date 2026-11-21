@@ -5,7 +5,12 @@ function ProductCard({ product, onAddToCart }) {
     <li className="Product">
       <span>{product.name}</span>
       <span className="category">{product.category}</span>
-      <button onClick={() => onAddToCart(product)}>Add to Cart</button>
+      <button
+        data-testid={`product-${product.id}`}
+        onClick={() => onAddToCart(product)}
+      >
+        Add to Cart
+      </button>
     </li>
   );
 }
