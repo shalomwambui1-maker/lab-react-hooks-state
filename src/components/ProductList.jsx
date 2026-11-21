@@ -1,6 +1,13 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
+export const sampleProducts = [
+  { id: 1, name: "Apple", category: "Fruits" },
+  { id: 2, name: "Milk", category: "Dairy" },
+  { id: 3, name: "Banana", category: "Fruits" },
+  { id: 4, name: "Cheese", category: "Dairy" },
+];
+
 function ProductList({ products, selectedCategory, onCategoryChange, onAddToCart }) {
   const categories = ["All", ...new Set(products.map((p) => p.category))];
 

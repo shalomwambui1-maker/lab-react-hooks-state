@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import ProductList from "./components/ProductList";
+import ProductList, { sampleProducts } from "./components/ProductList";
 import DarkModeToggle from "./components/DarkModeToggle";
 import Cart from "./components/Cart";
-
-// Replace this array with the one from your starter (see Step 2)
-export const sampleProducts = [
-  { id: 1, name: "Apple", category: "Fruits" },
-  { id: 2, name: "Milk", category: "Dairy" },
-  { id: 3, name: "Banana", category: "Fruits" },
-  { id: 4, name: "Cheese", category: "Dairy" },
-];
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
